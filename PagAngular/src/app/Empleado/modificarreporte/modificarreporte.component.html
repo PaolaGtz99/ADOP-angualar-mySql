@@ -1,0 +1,81 @@
+<div class="container" style="margin-top: 20px;" class="card m-3" style="background-color: rgb(244, 245, 250);">
+  <div class="card-body">
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-1"><button type="button" class="btn btn-lg" style="background-color: #e47c5d; color: white;" [routerLink]="['/menuempleado']"><i class="fas fa-undo-alt"></i> </button>
+      </div>
+      <div class="col-3"><h1 style="color: #e47c5d;"> <b> MODIFICAR REPORTE </b> </h1></div> 
+      <div class="col"></div>
+  </div>
+  <hr>
+  </div>
+  <div class="row mb-5">
+    <div class="col"></div>
+    <div class="col-10">
+      <div class="row"  *ngIf="!editable; else oculto">
+        <div class="col-3" *ngFor="let item of reportes">
+          <div class="card text-center hov" >
+            <div class="card mb-3" style="max-width: 18rem;">
+              <div class="card-header" style="background-color: rgb(223, 231, 240);">ID del reporte: {{ item.id_reporte }}</div>
+              <div class="card-body">
+                <h5 class="card-title">Id infante: {{ item.id_infante }}</h5>
+                <h5 class="card-title">Nombre infante: {{ item.nom_in }}</h5>
+                <h5 class="card-title">Id Adoptante: {{ item.id_usuario }}</h5>
+                <h5 class="card-title">Nombre adoptante: {{ item.nom_usuario }}</h5>
+              </div>
+              <div class="card-footer">
+                <h5 class="card-title">Descripción: {{ item.desc_rep }}</h5>
+                <h5 class="card-title">Fecha reporte: {{ item.fecha_rep | date }}</h5>
+                <button   type="button" (click)="actualizar(item)" class="btn btn-warning mb-2 mr-3"><i class="fas fa-pencil-alt"></i></button>
+                <button (click)="eliminar(item.id_reporte)"   type="button" class="btn btn-danger mb-2 ml-3" data-toggle="tooltip"
+                            data-placement="right" title="Eliminar"><i class="fas fa-times"></i></button>
+                            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+  
+<ng-template #oculto>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">
+            <h2> <b> Editar reporte</b> </h2>
+          </div>
+          <div class="col">
+            <div class="row-10"></div>
+            <div class="row"></div>
+            <div class="form-group">
+              <div class="col-md-12">
+                <input #texto1 size="400" type="text" [(ngModel)]="this.editdescripcion" class="form-control w-75" />
+              </div>
+              <div class="col-md-12">
+                <div class="card-title">
+                 <small> La fecha que tiene el reporte es {{this.editfecha | date}}</small>
+                </div>
+                <input #texto2 type="date" class="form-control w-75" />
+              </div>
+              
+              <div class="ml-4">
+                <a (click)="editable = false" class="btn btn-danger btn-sm text-light m-1"><i
+                  class="fa fa-times-circle fa-2x"></i></a>
+              <a (click)="actualizarRep(texto1.value, texto2.value)" class="btn btn-success btn-sm text-light m-1"><i
+                  class="fa fa-check-circle fa-2x"></i></a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</ng-template>
+  </div>
+
+ 

@@ -1,0 +1,220 @@
+<div class="container" style="margin-top: 20px;" class="card m-3" style="background-color: rgb(244, 245, 250);">
+  <div class="card-body">
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-1"><button type="button" class="btn btn-lg" style="background-color: #e47c5d; color: white;" [routerLink]="['/perfil']"><i class="fas fa-undo-alt"></i> </button>
+      </div>
+      <div class="col-4"><h1 style="color: #e47c5d;"> <b> Eliminar / Agregar empleado </b> </h1></div> 
+      <div class="col"></div>
+  </div>
+  <hr>
+  </div>
+    <div class="row mb-5">
+      <div class="col-1"></div>
+        <div class="col"> 
+          <div id="accordion" role="tablist">
+            <div class="card">
+              <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                  <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                    <i class="fas fa-question-circle"></i> Añadir nuevo empleado
+                  </a>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" style="color: #1a1818;">
+                <div class="card-body">
+                  <form  [formGroup]="forma" (ngSubmit)="guardarCambios()"  >
+
+                    <div class="container">
+                     <div class="row mt-5">
+                       <div class="col-12">
+                        <h4>Registro  <small> Ingrese todos los datos del empleado </small></h4>
+                        <hr>
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Nombre</label>
+                        <div class="col-8">
+                          <input class="form-control"
+                  
+                          type="text"
+                          placeholder="Nombre"
+                          formControlName="nombre">
+                  
+                  
+                        </div>
+                      </div>
+                  
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Apellido Paterno</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                                 type="text"
+                                 placeholder="Apellido"
+                                 formControlName="apep">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Apellido Materno</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                          type="text"
+                          placeholder="Apellido Materno"
+                          formControlName="apem">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Fecha de nacimiento </label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                          type="date"
+                          placeholder="Fecha de nacimiento DD/MM/AAAA"
+                          formControlName="fech_na">
+                        </div>
+                      </div>
+              
+                      <div class="form-group row">
+                        <div class="col-12">
+                          <label class="col-2 col-form-label">Puesto </label>
+                          <div>
+                            <input id="trabajadros" type="radio" value="Trabajador social" name="puesto" formControlName="puesto">
+                            <label for="trabajadros">Trabajador social</label>
+                         </div>
+                      
+                         <div>
+                            <input id="secre" type="radio" value="Secretario" name="puesto" formControlName="puesto">
+                            <label for="secre">Secretario(a)</label>
+                         </div>
+                          
+                        </div>
+                      </div>
+                  
+                      <h4>Domicilio y contacto</h4>
+                        <hr>
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Calle</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                          type="text"
+                          placeholder="Calle"
+                          formControlName="calle">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Colonia</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                          type="text"
+                          placeholder="Colonia"
+                          formControlName="colonia">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Municipio</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                          type="text"
+                          placeholder="Municipio"
+                          formControlName="municipio">
+                        </div>
+                      </div>
+                
+                       <div class="form-group row">
+                        <label class="col-2 col-form-label">Correo</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                  
+                          type="text"
+                          placeholder="Correo electronico"
+                          formControlName="correo">
+                  
+                  
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Numero de telefono</label>
+                        <div class="col-8">
+                  
+                          <input class="form-control"
+                  
+                          type="text"
+                          placeholder="Numero de telefono"
+                          formControlName="telefono">
+                  
+                  
+                        </div>
+                      </div>
+                
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Numero de celular</label>
+                        <div class="col-8">
+                          <input class="form-control"
+                          type="text"
+                          placeholder="Numero de celular"
+                          formControlName="celular">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-2 col-form-label">Asignale una contraseña</label>
+                        <div class="col-8">
+                          <input class="form-control"
+                          type="text"
+                          placeholder="Contraseña"
+                          formControlName="contra">
+                        </div>
+                      </div>
+                     <div class="form-group row">
+                      <label class="col-2 col-form-label">&nbsp;</label>
+                      <div class="input-group col-md-8">
+                        <button type="submit" class="btn btn-outline-primary"  >
+                          Registrar
+                        </button>
+                      </div>
+                    </div>
+                    </div>
+                    
+                   </div>
+                   </div>
+                  </form>
+                    </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="headingTwo">
+                <h5 class="mb-0">
+                  <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-question-circle"></i> Eliminar Empleado
+                  </a>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" style="color: #1a1818;">
+                <div class="card-body">
+                  <div class="col-12">
+                    <div class="row w-95 m-2">
+                        <div class="col-md-3 mb-2" *ngFor="let item of empelados">
+                          
+                          <div class="card text-white bg-info mb-3" style="max-width: 18rem; text-align: center;">
+                            <div class="card-header"> <b> ID: {{ item.id_usuario }}</b></div>
+                            <div class="card-body">
+                              <h5 class="card-title">Nombre: <b> {{ item.nom_usuario }}</b></h5>
+                              <h5 class="card-title">Puesto: <b> {{ item.puesto_usr}} </b></h5>
+                              <p class="card-text"><button type="button" (click)="eliminar(item.id_usuario)" class="btn btn-danger" data-toggle="tooltip"
+                                data-placement="right" title="Eliminar"><i class="fas fa-times"></i></button></p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+     
+  </div>
+ </div>
+ <div class="col-1"></div>
+</div>

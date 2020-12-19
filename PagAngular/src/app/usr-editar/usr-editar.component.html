@@ -1,0 +1,171 @@
+<div class="container">
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-1"><button type="button" class="btn btn-lg" style="background-color: #e47c5d; color: white;" [routerLink]="['/menuUsr']"><i class="fas fa-undo-alt"></i> </button>
+        </div>
+        <div class="col-3"><h1 style="color: #e47c5d;"> <b> Editar Informacion </b> </h1></div>
+        <div class="col"></div>
+    </div>
+    
+    <hr>
+    <div class="row mt-5">
+      <div class="col-6">
+       <h3> <b> Informacion  </b><small> Datos personales</small></h3>
+       <hr>
+     <div class="form-group row">
+       <label class="col-2 col-form-label">Nombre</label>
+       <div class="col-7">
+         <input class="form-control" type="text" placeholder="Nombre" #nom value="{{usuario.nombre}}">
+       </div>
+       <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario','nom_usuario',nom.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+     </div>
+ 
+     <div class="form-group row">
+       <label class="col-2 col-form-label">Apellido Paterno</label>
+       <div class="col-7">
+ 
+         <input class="form-control" #apeP
+                type="text"
+                placeholder="Apellido" value="{{usuario.apeP}}">  </div>
+                <div class="col-1">
+                    <button type="button" class="btn btn-warning" (click)="editar('usuario','ape_puser',apeP.value)"><i class="fas fa-pencil-alt"></i></button>
+                 </div>
+     </div>
+
+     <div class="form-group row">
+      <label class="col-2 col-form-label">Apellido Materno</label>
+      <div class="col-7">
+
+        <input class="form-control" #apeM
+               type="text"
+               placeholder="Apellido" value="{{usuario.apeM}}">  </div>
+               <div class="col-1">
+                   <button type="button" class="btn btn-warning" (click)="editar('usuario','ape_muser',apeM.value)"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+    </div>
+    
+
+
+     <div class="form-group row">
+       <label class="col-2 col-form-label">Numero de hijos</label>
+       <div class="col-7">
+ 
+         <input class="form-control" #numH
+         type="number" value="{{usuario.numHijos}}"
+         placeholder="Numero de hijos">
+       </div>
+       <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario_interesado','num_hijos',numH.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+     </div>
+     <div class="form-group row">
+       <label class="col-2 col-form-label">Ocupación</label>
+       <div class="col-7">
+ 
+         <input class="form-control" #ocuU
+         type="text" value="{{usuario.Ocupacion}}"
+         placeholder="Ocupación">
+       </div>
+       <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario_interesado','ocupacion',ocuU.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+     </div>
+     <div class="form-group row">
+       <label class="col-2 col-form-label">Sueldo mensual</label>
+       <div class="col-7">
+ 
+         <input class="form-control" #sueldoU
+         type="number" value="{{usuario.sueldo}}"
+         placeholder="Sueldo">
+       </div>
+       <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario_interesado','sueldo',sueldoU.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+     </div>
+     
+   </div>
+   <div class="col-6">
+    <h3> <b> Domicilio y contacto </b></h3>
+    <hr>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Calle</label>
+    <div class="col-7">
+
+      <input class="form-control" #calleU
+      type="text" value="{{usuario.calle}}"
+      placeholder="Calle">
+    </div>
+    <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario','calle_usr',calleU.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Colonia</label>
+    <div class="col-7">
+
+      <input class="form-control" #coloniaU
+      type="text" value="{{usuario.colonia}}"
+      placeholder="Colonia">
+      
+    </div>
+    <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario','colonia_usr',coloniaU.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Municipio</label>
+    <div class="col-7">
+
+      <input class="form-control" #munU
+      type="text" value="{{usuario.municipio}}"
+      placeholder="Municipio">
+    </div>
+    <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario','municipio_usr',munU.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+  </div>
+
+   <div class="form-group row">
+    <label class="col-2 col-form-label">Correo</label>
+    <div class="col-7">
+
+      <input class="form-control"
+
+      type="text" value="{{usuario.email}}" #correoU
+      placeholder="Correo electronico">
+    </div>
+    <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario','email_usr',correoU.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Numero telefono</label>
+    <div class="col-7">
+
+      <input class="form-control" #telU
+
+      type="text" value="{{usuario.tel}}"
+      placeholder="Numero de telefono">
+
+
+    </div>
+    <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario','tel_usr',telU.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Numero celular</label>
+    <div class="col-7">
+      <input class="form-control" #celU
+      type="text" value="{{usuario.cel}}"
+      placeholder="Numero de celular">
+    </div>
+    <div class="col-1">
+        <button type="button" class="btn btn-warning" (click)="editar('usuario','cel_usr',celU.value)"><i class="fas fa-pencil-alt"></i></button>
+     </div>
+  </div>
+   </div>
+ </div>
+ </div>

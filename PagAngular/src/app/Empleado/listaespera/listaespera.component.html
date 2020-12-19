@@ -1,0 +1,37 @@
+<div class="container" style="margin-top: 20px;" class="card m-3" style="background-color: rgb(244, 245, 250);">
+  <div class="card-body">
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-1"><button type="button" class="btn btn-lg" style="background-color: #e47c5d; color: white;" [routerLink]="['/menuempleado']"><i class="fas fa-undo-alt"></i> </button>
+      </div>
+      <div class="col-3"><h1 style="color: #e47c5d;"><b>LISTA DE ESPERA</b> </h1></div> 
+      <div class="col"></div>
+  </div>
+  <hr>
+  </div>
+  <div class="row mt-2">
+    <div class="col"></div>
+    <div class="col-10">
+        <table class="table table-hover" style="text-align: center;">
+            <thead class="thead-light">
+              <tr>
+                <th>Lista</th>
+                <th>Estado</th>
+                <th>Fecha Solicitud</th>
+                <th>Posible adoptante</th>
+                <th>Posible adoptado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of lista">
+                <th> {{item.categoria}} </th>
+                <td>{{item.estado}}</td>
+                <td>{{item.fecha | date}}</td>
+                <td>{{item.nom_usuario}}</td>
+                <th>{{item.nom_in}}</th>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <div class="col"></div>
+</div>
+  </div>

@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 20px;" class="card m-3" style="background-color: rgb(244, 245, 250);">
+    <div class="card-body">
+        <h1 style="color: #e47c5d; text-align: center;">Bienvenido <b> {{usuario.nombre}} {{usuario.apeP}} {{usuario.apeM}} </b></h1>
+        <p style="color:  #142b3b; text-align: center;">Puesto: <b> {{usuario.puesto}} </b></p>
+    </div>
+    <div class="row mb-3">
+        <div class="col-4"></div>
+        <div *ngIf="this.tipousuario == 'tsocial'" class="col-4">
+            <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="/registroinfante">Registro infantes</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" [routerLink]="['/registrosolicitudes']">Aceptar / Denegar solicitudes</button>
+          <!--  <button type="button" class="btn btn-secondary btn-lg btn-block" [routerLink]="['/registrocurso']">Registro cursos</button>-->
+            <button type="button" class="btn btn-secondary btn-lg btn-block"[routerLink]="['/crearreporte']">Crear reporte</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" [routerLink]="['/modificarreporte']">Modificar reporte</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block"[routerLink]="['/listaespera']">Ver lista de espera</button>
+        </div>
+        <div *ngIf="this.tipousuario == 'secretario'" class="col-4">
+         <!--   
+            <button type="button" class="btn btn-secondary btn-lg btn-block" [routerLink]="['/registrosolicitudes']">Registro solicitudes</button> 
+              <button type="button" class="btn btn-secondary btn-lg btn-block"[routerLink]="['/crearreporte']">Crear reporte</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" [routerLink]="['/modificarreporte']">Modificar reporte</button>
+        -->
+        <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="/registroinfante">Registro infantes</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" [routerLink]="['/registrocurso']">Registro cursos</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block"[routerLink]="['/listaespera']">Ver lista de espera</button>
+            <br>
+            <br>
+            <br>
+          </div>
+    </div>
+  </div>

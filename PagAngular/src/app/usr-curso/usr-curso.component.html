@@ -1,0 +1,66 @@
+<div class="container" style="margin-top: 20px;" class="card m-3" style="background-color: rgb(244, 245, 250);">
+    
+    <div class="card-body">
+        
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-1"></div>
+            <div class="col-1"><button type="button" class="btn btn-lg" style="background-color: #e47c5d; color: white;" [routerLink]="['/menuUsr']"><i class="fas fa-undo-alt"></i> </button>
+            </div>
+            <div class="col-5"><h1 style="color: #e47c5d; margin-left: 0px;">Lista de Cursos Disponibles</h1></div>
+            <div class="col-5"></div>
+        </div>
+        
+        <div class="row mt-2">
+            <div class="col"></div>
+            <div class="col-10">
+                <table class="table table-hover" style="text-align: center;">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>ID</th>
+                        <th>Nombre de Curso</th>
+                        <th>Imparte</th>
+                        <th>Fecha</th>
+                        <th>Inscribirse</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of cursos">
+                        <th scope="row">{{ item.id_curso}}</th>
+                        <td>{{ item.nom_c }}</td>
+                        <td>{{item.id_usuario}}</td>
+                        <td>{{item.fecha_c | date}}</td>
+                        <th><button (click)="inscribir(item.id_curso,usuario.id)" type="button" class="btn btn-success" data-toggle="tooltip"
+                            data-placement="right" title="Inscribirse a curso"><i class="fas fa-check"></i></button></th>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row mt-2" *ngIf="this.bandera == true" >
+          <div class="col"></div>
+          <div class="col-10">
+            <h4> Cuentas con los siguientes cursos</h4>
+              <table class="table table-hover" style="text-align: center;">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>ID</th>
+                      <th>Nombre de Curso</th>
+    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of cursosUsuario">
+                      <th scope="row">{{ item.id_curso}}</th>
+                      <td>{{ item.nom_c }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+          <div class="col"></div>
+      </div>
+    </div>
+ 
+    
+  </div>

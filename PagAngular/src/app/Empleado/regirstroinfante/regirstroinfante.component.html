@@ -1,0 +1,186 @@
+<div class="container" style="margin-top: 20px;" class="card m-3" style="background-color: rgb(244, 245, 250);">
+  <div class="card-body">
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-1"><button type="button" class="btn btn-lg" style="background-color: #e47c5d; color: white;" [routerLink]="['/menuempleado']"><i class="fas fa-undo-alt"></i> </button>
+      </div>
+      <div class="col-3"><h1 style="color: #e47c5d;"><b>REGISTRO INFANTE</b> </h1></div> 
+      <div class="col"></div>
+  </div>
+  <hr>
+  </div>
+    <div class="row">
+        <div class="col-12"> 
+        <form  [formGroup]="forma" (ngSubmit)="guardarCambios()"  >
+
+            <div class="container">
+             <div class="row mt-5">
+               <div class="col-12">
+                <h4>Registro de infante  <small> Ingrese todos los datos</small></h4>
+                <hr>
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Nombre</label>
+                <div class="col-12">
+          
+                  <input class="form-control"
+          
+                  type="text"
+                  placeholder="Nombre"
+                  formControlName="nomin">
+          
+          
+                </div>
+              </div>
+          
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Apellido Paterno</label>
+                <div class="col-12">
+          
+                  <input class="form-control"
+                         type="text"
+                         placeholder="Apellido"
+                         formControlName="apepin">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Apellido Materno</label>
+                <div class="col-12">
+          
+                  <input class="form-control"
+                  type="text"
+                  placeholder="Apellido Materno"
+                  formControlName="apemin">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Fecha de nacimiento </label>
+                <div class="col-12">
+          
+                  <input class="form-control"
+                  type="date"
+                  placeholder="Fecha de nacimiento DD/MM/AAAA"
+                  formControlName="fe_nain">
+                </div>
+              </div>
+        
+              <div class="form-group row">
+                <div class="col-12">
+                  <label class="col-2 col-form-label">Sexo</label>
+                  <div>
+                    <input id="male" type="radio" value="M" name="gender" formControlName="gender">
+                    <label for="male">Masculino</label>
+                 </div>
+              
+                 <div>
+                    <input id="female" type="radio" value="F" name="gender" formControlName="gender">
+                    <label for="female">Femenino</label>
+                 </div>
+                  
+                </div>
+              </div>
+              
+              <h4>Registro de entrada <small>(datos del tutor si es que los hay)</small> </h4>
+              <hr>
+              
+        <div class="form-group row">
+                <label class="col-2 col-form-label">Nombre</label>
+                <div class="col-8">
+          
+                  <input class="form-control"
+          
+                  type="text"
+                  placeholder="Nombre"
+                  formControlName="nomtutor">
+          
+          
+                </div>
+              </div>
+          
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Apellido Paterno</label>
+                <div class="col-8">
+          
+                  <input class="form-control"
+                         type="text"
+                         placeholder="Apellido"
+                         formControlName="apeptu">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Apellido Materno</label>
+                <div class="col-8">
+          
+                  <input class="form-control"
+                  type="text"
+                  placeholder="Apellido Materno"
+                  formControlName="apemtu">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Fecha de entrada del infante </label>
+                <div class="col-8">
+          
+                  <input class="form-control"
+                  type="date"
+                  placeholder="Fecha de entrada del infante"
+                  formControlName="fech_en">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Descripción</label>
+                <div class="col-8">
+          
+                  <input class="form-control"
+          
+                  type="text"
+                  placeholder="Descripción de la situacion"
+                  formControlName="desc">
+          
+          
+                </div>
+              </div>
+              <h4>Datos extra<small>(ingresar datos)</small> </h4>
+              <hr>
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Num habitacion</label>
+                <div class="col-8">
+          
+                  <input class="form-control"
+          
+                  type="number"
+                  placeholder="Numero Habitacion"
+                  formControlName="numha">
+          
+          
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-2 col-form-label">Seccion (P,M,A)</label>
+                <div class="col-8">
+          
+                  <input class="form-control"
+          
+                  type="text"
+                  placeholder="Seccion"
+                  formControlName="sec">
+          
+          
+                </div>
+              </div>
+             <div class="form-group row">
+              <label class="col-2 col-form-label">&nbsp;</label>
+              <div class="input-group col-md-8">
+                <button type="submit" class="btn btn-outline-primary"  >
+                  Registrar
+                </button>
+              </div>
+            </div>
+            </div>
+          </div>
+          </div>
+          </form>
+        </div>
+    </div>
+  </div>
+
+
+

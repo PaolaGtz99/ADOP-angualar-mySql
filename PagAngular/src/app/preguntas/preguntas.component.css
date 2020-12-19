@@ -1,0 +1,17 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.card-header{
+    background-color: #142b3b ; 
+    
+}
+
+.card-body{
+    text-align: justify;
+}
+
+i{
+    color:  #5ebdb2;
+}

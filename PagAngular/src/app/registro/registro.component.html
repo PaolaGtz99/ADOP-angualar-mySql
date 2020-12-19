@@ -1,0 +1,279 @@
+<form  [formGroup]="forma" (ngSubmit)="guardarCambios()"  >
+
+    <div class="container">
+     <div class="row mt-5">
+       <div class="col-6">
+        <h4>Registro  <small> Ingrese todos los datos</small></h4>
+        <hr>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Nombre</label>
+        <div class="col-8">
+  
+          <input class="form-control"
+  
+          type="text"
+          placeholder="Nombre"
+          formControlName="nombre">
+  
+  
+        </div>
+      </div>
+  
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Apellido Paterno</label>
+        <div class="col-8">
+  
+          <input class="form-control"
+                 type="text"
+                 placeholder="Apellido"
+                 formControlName="apep">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Apellido Materno</label>
+        <div class="col-8">
+  
+          <input class="form-control"
+          type="text"
+          placeholder="Apellido Materno"
+          formControlName="apem">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Fecha de nacimiento </label>
+        <div class="col-8">
+  
+          <input class="form-control"
+          type="date"
+          placeholder="Fecha de nacimiento DD/MM/AAAA"
+          formControlName="fech_na">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Estado civil </label>
+        <div class="col-8">
+          <div>
+            <input id="soltero" type="radio" value="Soltero" name="estadocivil" formControlName="estadocivil">
+            <label for="soltero">Soltero (a)</label>
+         </div>
+      
+         <div>
+            <input id="casado" type="radio" value="Casado" name="estadocivil" formControlName="estadocivil">
+            <label for="casado">Casado(a)</label>
+         </div>
+    
+       <div>
+          <input id="divorciado" type="radio" value="Divorciado" name="estadocivil" formControlName="estadocivil">
+          <label for="divorciado">Divorciado(a)</label>
+       </div>
+  
+     <div>
+        <input id="union" type="radio" value="Union Libre" name="estadocivil" formControlName="estadocivil">
+        <label for="union">Union Libre</label>
+     </div>
+        </div>
+      </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Sexo </label>
+        <div class="col-8">
+            <div>
+              <input id="male" type="radio" value="M" name="gender" formControlName="gender">
+              <label for="male">Masculino</label>
+           </div>
+        
+           <div>
+              <input id="female" type="radio" value="F" name="gender" formControlName="gender">
+              <label for="female">Femenino</label>
+           </div>
+          
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-2 col-form-label">¿Cuenta con vivienda propia? </label>
+        <div class="col-8">
+            <div>
+              <input id="sic" type="radio" value="Si" name="propia" formControlName="propia">
+              <label for="sic">Si</label>
+           </div>
+        
+           <div>
+              <input id="noc" type="radio" value="No" name="propia" formControlName="propia">
+              <label for="noc">No</label>
+           </div>
+          
+          </div>
+        </div>
+    
+        <div class="form-group row">
+          <label class="col-2 col-form-label">¿Cuenta con alguna enfermedad cronica? </label>
+          <div class="col-8">
+            <div>
+              <input id="sie" type="radio" value="Si" name="enfermedad" formControlName="enfermedad">
+              <label for="sie">Si</label>
+           </div>
+        
+           <div>
+              <input id="noe" type="radio" value="No" name="enfermedad" formControlName="enfermedad">
+              <label for="noe">No</label>
+           </div>
+          
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Numero de hijos</label>
+          <div class="col-8">
+    
+            <input class="form-control"
+            type="number"
+            placeholder="Numero de hijos"
+            formControlName="hijos">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Ocupación</label>
+          <div class="col-8">
+    
+            <input class="form-control"
+            type="text"
+            placeholder="Ocupación"
+            formControlName="ocupacion">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Sueldo mensual</label>
+          <div class="col-8">
+    
+            <input class="form-control"
+            type="number"
+            placeholder="Sueldo"
+            formControlName="sueldo">
+          </div>
+        </div>
+        <h4>Domicilio y contacto</h4>
+          <hr>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Calle</label>
+          <div class="col-8">
+    
+            <input class="form-control"
+            type="text"
+            placeholder="Calle"
+            formControlName="calle">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Colonia</label>
+          <div class="col-8">
+    
+            <input class="form-control"
+            type="text"
+            placeholder="Colonia"
+            formControlName="colonia">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Municipio</label>
+          <div class="col-8">
+    
+            <input class="form-control"
+            type="text"
+            placeholder="Municipio"
+            formControlName="municipio">
+          </div>
+        </div>
+  
+         <div class="form-group row">
+          <label class="col-2 col-form-label">Correo</label>
+          <div class="col-8">
+    
+            <input class="form-control"
+    
+            type="text"
+            placeholder="Correo electronico"
+            formControlName="correo">
+    
+    
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Numero de telefono</label>
+          <div class="col-8">
+    
+            <input class="form-control"
+    
+            type="text"
+            placeholder="Numero de telefono"
+            formControlName="telefono">
+    
+    
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Numero de celular</label>
+          <div class="col-8">
+            <input class="form-control"
+            type="text"
+            placeholder="Numero de celular"
+            formControlName="celular">
+          </div>
+        </div>
+        <h4>Antecedentes penales <small> Para dar seguimiento a tu solicitu sube tu carta de antecedentes penales</small></h4>
+          <hr>
+          <div class="form-group row">
+            <label class="col-2 col-form-label">Carta de Antecedentes penales</label>
+            <div class="col-8">
+      
+              <input class="form-control"
+      
+              type="file"
+              formControlName="carta">
+      
+      
+            </div>
+          </div>
+
+          <h4>Modo de ingreso <small> Para ingresar a tu perfil, solo necesitaras tu correo y contraseña</small></h4>
+        <hr>
+      <div class="form-group row">
+        <label class="col-2 col-form-label">Contraseña: </label>
+        <div class="col-8">
+  
+          <input class="form-control"
+  
+          type="password"
+          placeholder="Ingresa contraseña"
+          formControlName="contra">
+  
+         </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-2 col-form-label">Confirma la contraseña: </label>
+          <div class="col-8">
+    
+            <input class="form-control"
+    
+            type="password"
+            placeholder="Ingresa nuevamente la contraseña"
+            formControlName="contra2">
+    
+           </div>
+          </div>
+     <div class="form-group row">
+      <label class="col-2 col-form-label">&nbsp;</label>
+      <div class="input-group col-md-8">
+        <button type="submit" class="btn btn-outline-primary"  >
+          Registrarme
+        </button>
+      </div>
+    </div>
+    </div>
+    <div class="col-6">
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="../../assets/adopcion.jpg" width="400px" alt=""></div>
+    </div>
+  </div>
+  </div>
+  </form>
